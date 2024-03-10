@@ -11,6 +11,11 @@
 <body>
     <div class="container">
         <h1 class="heading">Rock Paper Scissors</h1>
+        <div class="head">
+            <h3 style="padding-right: 5rem;">Your's</h3>
+            <h3 style="padding-left: 5rem;margin-left: 6rem;">Computer's</h3>
+        </div>
+        <div class="both">
          <div class="choices">
             <div class="choice">
                 <span>&#127761;</span>
@@ -22,13 +27,25 @@
                 <span>&#9986;</span>
             </div>
         </div>
+        <div class="computer">
+                <div class="choice1" >
+                    <span class="r">&#127761;</span>
+                </div>
+                <div class="choice1">
+                    <span class="p">&#128220;</span>
+                </div>
+                <div class="choice1">
+                    <span class="s">&#9986;</span>
+                </div>
+        </div>
+    </div>
         <div class="score-board">
             <div class="score user">
-                <span id="user-score">0</span>
+                <span id="user-score" style="background-color: blueviolet;">0</span>
                 <span>You</span>
             </div>
             <div class="score com">
-                <span id="com-score">0</span>
+                <span id="com-score" style="background-color:rgb(228, 124, 193);">0</span>
                 <span>Computer</span>
             </div>
         </div>

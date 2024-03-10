@@ -2,15 +2,27 @@ let userScore=0;
 let comScore=0;
 
 const choices=document.querySelectorAll(".choice");
+const computer=document.querySelectorAll(".computer");
 const msg=document.querySelector("#msg");
 const msgContainer=document.querySelector(".msg-container");
 const userScorePara=document.querySelector("#user-score");
 const comScorePara=document.querySelector("#com-score");
 
 const genComChoice=()=>{
-    const options=["rock","paper","scissors"];
+    const options=["&#127761;","&#128220;","&#9986;"];
     const ranIdx=Math.floor(Math.random()*3);
-    return options[ranIdx];
+    return computer.innerText=options[ranIdx];
+    options[ranIdx].style.backgroundColor="red";
+    // if(ranIdx==options[0]){
+    //    return computer.innerText="&#127761;";
+    // }
+    // else if(ranIdx==options[1])
+    // {
+    //    return computer.innerText="&#128220;";
+    // }
+    // else{
+    //     return computer.innerText="&#9986;";
+    // }
 };
 const drawGame=()=>{
     msg.innerText="Game was draw , Play again";
@@ -30,6 +42,7 @@ const showWinner=(userWin,userChoice,comChoice)=>{
         msg.innerText="You lose..";
         msgContainer.style.backgroundColor="red";
     }
+
 };
 const playGame=(userChoice)=>{
     //generate computer choice
@@ -39,15 +52,15 @@ const playGame=(userChoice)=>{
     }
     else{
         let userWin=true;
-        if(userChoice=="rock"){
+        if(userChoice=="&#127761;"){
             //scissors,paper
-            userWin=comChoice==="paper"?false:true;
+            userWin=comChoice==="&#128220;"?false:true;
         }
-        else if(userChoice==="paper"){
-            userWin=comChoice==="scissors"?false:true;
+        else if(userChoice==="&#128220;"){
+            userWin=comChoice==="&#9986;"?false:true;
         }else{
             //rock paper
-            userWin=comChoice=="rock"?false:true;
+            userWin=comChoice=="&#127761;"?false:true;
         }
         showWinner(userWin,userChoice,comChoice);
     }
@@ -56,5 +69,6 @@ choices.forEach((choice)=>{
     choice.addEventListener("click",()=>{
         const userChoice=choice.getAttribute("id");
         playGame(userChoice);
+
     })
 })
