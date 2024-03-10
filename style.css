@@ -51,7 +51,7 @@ body{
  
 }
 .choice1{
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 1rem;
     background-color: rgb(211, 86, 169);
     border-radius: 50%;
@@ -60,7 +60,7 @@ body{
     cursor: pointer;
 }
 .choice{
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 1rem;
     background-color: rgb(152, 41, 255);
     border-radius: 50%;
